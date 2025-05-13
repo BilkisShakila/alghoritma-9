@@ -88,3 +88,22 @@ void addNode()
     }
 }
 
+//pembuatan functional search untuk mencari data
+bool search(int rollNo, Node **previous, Node **current)
+{
+    *previous = NULL;
+    *current = START;
+    while (*current != NULL && (*current)->noMhs != rollNo)
+    {
+        *previous = *current;
+        *current = (*current)->next;
+    }
+    return (*current != NULL);
+}
+
+//pembuatan prosedur delete untuk menghapus data
+void deleteNode()
+{
+    
+}
+
